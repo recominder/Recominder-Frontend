@@ -12,8 +12,7 @@ class Login extends Component {
     }
     render() {
        return(
-        <div class="registerContainer">
-         <div class="signup">
+         <div className="signup">
              <h2>Join Today</h2>
                  <form action="https://recominder-api.herokuapp.com/register" method="post" onSubmit={(e) => {e.preventDefault()}}>
                      <input type="text" name="email" placeholder="Email" onChange={e => this.setState({email: e.target.value})} value={this.state.email}/>
@@ -22,7 +21,6 @@ class Login extends Component {
                      <span>Already Have an Account? <Link to="/register">Sign Up</Link></span>
                  </form>
          </div>
-        </div>
         )
 }
 }

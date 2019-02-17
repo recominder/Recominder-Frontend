@@ -7,14 +7,14 @@ import register from './register'
 
 function App() {
   return (
-    <main>
+    <div className="main">
       <Switch>
         <Route exact path='/' component={Home}/>
         <Route path='/login' component={login}/>
         <Route path='/register' component={register}/>
 
       </Switch>
-    </main>
+    </div>
   );
 }
 
