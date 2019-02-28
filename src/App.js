@@ -1,9 +1,8 @@
 import React from 'react';
-import './App.css';
 import { Switch, Route } from 'react-router-dom'
-import login from './login'
-import Home from './Home'
-import register from './register'
+import login from './pages/login'
+import Home from './pages/Home'
+import register from './pages/register'
 
 function App() {
   return (
