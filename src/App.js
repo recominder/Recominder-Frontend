@@ -6,7 +6,7 @@ import { CookiesProvider } from 'react-cookie'
 import login from './pages/login'
 import Home from './pages/Home'
 import register from './pages/register'
-import User from './pages/User'
+// import User from './pages/User'
 // maybe add protected route?
 
 function App() {
