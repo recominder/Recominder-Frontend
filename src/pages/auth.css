@@ -1,13 +1,29 @@
+.authContainer {
+    width: 100vw;
+    height: 100vh;
+    background: -webkit-linear-gradient(#FFAD71, rgba(245, 6, 6, 0.918));
+    padding: 1% 0 0 0;
+    text-align: center;
+}
+
+.authContainer > h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 4em;
+    letter-spacing: 2px;
+    margin: 5%;
+}
+
 .signup {
     align-self: center;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
     width: 30%;
-    height: 60%;
-    border: 1px solid #cccccc;
-    background-color: #fafafa;
+    height: 50%;
+    border: 1px solid #7a7a7a;
+    background-color: #ececec;
     border-radius: 10px;
     margin: auto;
     padding: 10px;
@@ -29,10 +45,6 @@
     justify-content: space-around;
     align-items: center;
     padding: 5px;
-}
-  
-.registerContainer img {
-    margin: 35px 0 20px 0;
 }
   
 .signup button{

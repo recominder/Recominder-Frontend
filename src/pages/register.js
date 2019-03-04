@@ -17,8 +17,7 @@ class Register extends Component {
     }
   }
 
-  handleSubmit(e) {
-    e.preventDefault()
+  handleClick() {
     // checking login credentials
     const { email, password, passwordConf } = this.state
     const body = { email, password, passwordConf }
@@ -44,20 +43,19 @@ class Register extends Component {
 
   render() {
     return (
-      <div className="registerContainer">
+      <div className="authContainer">
+        <h1>Recominder</h1>
         { this.state.redirect && <Redirect to="/" /> }
         <div className="signup">
           <h2>Join Today</h2>
-          <form action="https://recominder-api.herokuapp.com/register" method="post" onSubmit={e => this.handleSubmit(e)}>
-            <input type="text" name="email" placeholder="Email" onChange={e => this.setState({ email: e.target.value })} value={this.state.email} />
-            <input type="text" name="password" placeholder="Password" onChange={e => this.setState({ password: e.target.value })} value={this.state.password} />
-            <input type="text" name="passwordConf" placeholder="Password" onChange={e => this.setState({ passwordConf: e.target.value })} value={this.state.passwordConf} />
-            <button type="submit" name="register">Register</button>
-            <span>
-                Already Have an Account?
-              <Link to="/login"> Login</Link>
-            </span>
-          </form>
+          <input type="text" name="email" placeholder="Email" onChange={e => this.setState({ email: e.target.value })} value={this.state.email} />
+          <input type="text" name="password" placeholder="Password" onChange={e => this.setState({ password: e.target.value })} value={this.state.password} />
+          <input type="text" name="passwordConf" placeholder="Password" onChange={e => this.setState({ passwordConf: e.target.value })} value={this.state.passwordConf} />
+          <button type="submit" name="register" onClick={() => this.handleClick()}>Register</button>
+          <span>
+              Already Have an Account?
+            <Link to="/login"> Login</Link>
+          </span>
         </div>
       </div>
     )
